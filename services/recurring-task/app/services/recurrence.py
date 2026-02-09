@@ -62,9 +62,7 @@ def compute_next_occurrence(
         max_day = calendar.monthrange(year, month)[1]
         actual_day = min(day_of_month, max_day)
 
-        return completed_at.replace(
-            year=year, month=month, day=actual_day
-        )
+        return completed_at.replace(year=year, month=month, day=actual_day)
 
     elif rtype == "custom":
         interval_days = recurrence_pattern.get("interval_days")

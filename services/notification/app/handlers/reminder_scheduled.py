@@ -42,9 +42,7 @@ async def handle_reminder_scheduled(event_data: dict[str, Any]) -> None:
 
     try:
         async with httpx.AsyncClient() as client:
-            resp = await client.put(
-                job_url, json=job_payload, timeout=5.0
-            )
+            resp = await client.put(job_url, json=job_payload, timeout=5.0)
             resp.raise_for_status()
             logger.info(
                 "dapr_job_scheduled",

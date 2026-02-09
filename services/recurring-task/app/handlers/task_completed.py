@@ -98,9 +98,7 @@ async def handle_task_completed(event_data: dict[str, Any]) -> None:
     }
 
     user_id = data.get("user_id", "")
-    create_url = (
-        f"{settings.dapr_base_url}/v1.0/invoke/backend/method/api/tasks"
-    )
+    create_url = f"{settings.dapr_base_url}/v1.0/invoke/backend/method/api/tasks"
 
     try:
         async with httpx.AsyncClient() as client:

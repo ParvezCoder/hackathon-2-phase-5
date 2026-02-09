@@ -43,9 +43,7 @@ class Task(SQLModel, table=True):
         default_factory=lambda: datetime.now(timezone.utc),
         index=True,
     )
-    updated_at: datetime = Field(
-        default_factory=lambda: datetime.now(timezone.utc)
-    )
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     completed_at: datetime | None = Field(default=None)
 
 
