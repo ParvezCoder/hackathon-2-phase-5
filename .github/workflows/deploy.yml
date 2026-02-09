@@ -31,7 +31,7 @@ jobs:
       - uses: docker/build-push-action@v6
         with:
           context: ${{ matrix.service.context }}
-          push: true
+          push: false
           tags: todo-${{ matrix.service.name }}:${{ github.sha }},todo-${{ matrix.service.name }}:latest
 
   deploy:
