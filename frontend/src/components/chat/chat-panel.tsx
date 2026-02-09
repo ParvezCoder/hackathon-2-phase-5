@@ -1,5 +1,5 @@
 "use client";
-
+// chat_palnal
 import { useRef, useState } from "react";
 import { sendChatMessage } from "@/lib/api-client";
 import { MessageList } from "./message-list";
